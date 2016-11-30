@@ -13,3 +13,85 @@
  *= require_tree .
  *= require_self
  */
+
+/**********BODY STYLES***********/
+
+body {
+	background-image: url("../images/background1.jpg");
+	width: 100%;
+	height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+/*******************NAVBAR STYLES*******************/
+
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.topnav li {
+	display: inline;
+}
+
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 24px 26px;      
+  text-decoration: none;
+  font-size: 22px;   
+  font-family: 'Alfa Slab One', cursive;
+  border-radius: 15px 50px;
+}
+
+.topnav a:hover {
+	background-color: #009933;
+	transition: 0.6s;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+.topnav li.icon {
+	display: none;
+}
+
+@media screen and (max-width:680px) {
+  .topnav li:not(:first-child) {
+  	display: none;
+  }
+  .topnav li {
+  	float: left;
+  }
+  .topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  .topnav.responsive {
+  	position: relative;
+  }
+  .topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  .topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
