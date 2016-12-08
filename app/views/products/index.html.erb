@@ -9,7 +9,11 @@
     </div>
     <div class="col-md-6">
       <h1>BEER <span>GOBLIN</span></h1>
-      <h5>Choose your beer</h5>
+      <h5>Choose your beer or search</h5>
+        <%= form_tag("/products", method: "get") do %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+        <% end %>
     </div>
     <div class="col-md-3">
     </div>
@@ -18,13 +22,9 @@
 
 <div class="container-fluid" id="side-nav-wrapper">
   <div class="row">
-    <div class="col-md-2 col-sm-2 col-xs-2">
+    <div class="col-md-2 col-sm-6 col-xs-2">
       <ul class="side-nav">
-        <%= form_tag("/products", method: "get") do %>
-        <%= label_tag(:q, "Search for:") %>
-        <%= text_field_tag(:q) %>
-        <%= submit_tag("Search") %>
-        <% end %>
+      <li><%#= link_to 'test',  @products %></li>
         <li><a href="#brooklyn">Brooklyn Brewery</a></li>
         <li><a href="#wychwood">Wychwood</a></li>
         <li><a href="#flying-dog">Flying Dog</a></li>

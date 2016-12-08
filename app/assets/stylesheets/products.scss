@@ -21,26 +21,25 @@
 #beer-col {
   padding: 0 10px 0 10px;
   margin: 0 10px 0 10px;
- display: inline-block;
- /*width:  270px;*/
+  display: inline-block;
 }
 
 
 .beer-img-wrap {
+  display: inline-block;
   width: 270px;
   height: 100%;
-  float: left;
   background-color: #1a1a1a;
   margin: 20px;
   border-radius: 80px 50px;
-  position: relative; /*static;*/
+  /*position: relative;*/
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 820px) {
   .beer-img-wrap {
     width: 240px;
-    float: right;
     border-radius: 70px 50px;
     margin-right: 0;
+    /*padding: 10px;*/
   }
 }
 
@@ -99,7 +98,7 @@
   width: 20%;
   margin-top: 50px;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 820px) {
  .side-nav {
   padding: 0;
   margin: 0;
@@ -117,14 +116,15 @@
 }
 
 .side-nav li a {
+  background: transparent;
   text-decoration: none;
   display: inline-block;
   color: #f2f2f2;
-  padding: 24px 26px;     
+  padding: 24px 26px;   
   font-size: 18px;
   font-family: 'Alfa Slab One', cursive;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 820px) {
  .side-nav li a {
   padding: 8px 5px;
   width: 20%;
@@ -132,3 +132,8 @@
   }
 }
 
+.beer-show-head h1 {
+  font-family: 'Alfa Slab One', cursive;
+  color: white;
+  text-align: center;
+}

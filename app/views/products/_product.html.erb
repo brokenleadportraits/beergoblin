@@ -1,11 +1,11 @@
 
-<div class="col-md-3 col-sm-12" id="beer-col">
+<div class="col-md-3 col-sm-4" id="beer-col">
   <!-- <div class="beer-logo" id="brooklyn"> -->
     <!-- <img src="images/brooklyn-logo.png" class="img-responsive" id="beerlogo1"> -->
  <!--  </div> -->
   <div class="beer-img-wrap">
     <%= image_tag(product.image_url, class: "img-responsive") unless product.image_url.blank? %>
-    <p><%= product.name %>
+    <p><%= product.name %><br>
     <%= product.description %><br>
     $<%= product.price %></p>
     <%= link_to 'Show', product %>
