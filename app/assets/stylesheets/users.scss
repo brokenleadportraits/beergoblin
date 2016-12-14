@@ -1,0 +1,22 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#devise-form {
+	margin-top: 30px;
+  font-family: 'Alfa Slab One', cursive;
+  text-align: center;
+  color: #cc7a00;
+  font-size: 1.4em;
+  font-style: italic;
+  background-color: #009933;
+  width: 20%;
+  border-radius: 15px 50px;
+}
+
+@media screen and (max-width:680px) {
+	#devise-form {
+
+  width: 100%;
+	}
+}
