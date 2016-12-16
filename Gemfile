@@ -26,7 +26,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#devise for authentication (log in and out forms)
 gem 'devise'
+#cancancan for authorization users. Run: rails g cancan:ability to generate model file: ability.rb
+gem 'cancancan', '~> 1.10'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # group :development, :test do

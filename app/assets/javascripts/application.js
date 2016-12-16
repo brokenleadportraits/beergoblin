@@ -24,3 +24,7 @@ function myFunction() {
     }
 }
 
+$(document).on('turbolinks:load',function(){
+  console.log($(".alert")); // = test to see works in console
+  $(".alert").delay(3000).fadeOut("slow");
+});
