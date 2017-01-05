@@ -4,6 +4,10 @@
 */
 
 
+#search-bar {
+  width: 270px;
+  margin: 0 auto;
+}
 
 #beer-content {
   margin-top: 60px;
@@ -25,6 +29,11 @@
 }
 
 
+.beer-img-wrap:hover {
+  background-color: #009933;
+  transition: 0.9s;
+}
+
 .beer-img-wrap {
   display: inline-block;
   width: 270px;
@@ -41,11 +50,6 @@
     margin-right: 0;
     /*padding: 10px;*/
   }
-}
-
-.beer-img-wrap:hover {
-  background-color: #009933;
-  transition: 0.9s;
 }
 
 .beer-img-wrap img {
@@ -69,20 +73,6 @@
   color: white;
 }
 
-
-.beer-logo {
-  height: 20%;
-  width: 20%;
-  margin-top: 50px;
-  margin-left: 30%;
-}
-@media screen and (max-width: 680px) {
- .beer-logo {
-  height: 60%;
-  width: 60%;
-  margin: 0 auto;
-  }
-}
 
 
 
@@ -132,8 +122,72 @@
   }
 }
 
+
+
+
+/*****************SHOW PRODUCT PAGE (SIINGLE BEERS)****************/
+#beer-show {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
 .beer-show-head h1 {
   font-family: 'Alfa Slab One', cursive;
   color: white;
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
+
+
+/*#stripe-button {
+  width: 130px;
+  margin: 0 auto;
+}*/
+
+/*********************BEER LOGO SHOW IN SIDE NAV JS ONCLICK**************/
+#beer-logo.active {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 450px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 680px) {
+ #beer-logo.active {
+  margin-left: 40px;
+  height: 170px;
+  width: 420px;
+  }
+}
+
+
+#beer-logo.brooklyn-brewery {
+  background-image: url(brooklyn-logo.png);
+} 
+
+#beer-logo.wychwood {
+  background-image: url(wychwood-logo.png);
+} 
+
+#beer-logo.flying-dog {
+  background-image: url(flying-dog-logo.png);
+} 
+
+#beer-logo.oskar-blues {
+  background-image: url(oskar.png);
+} 
+
+#beer-logo.goose-island {
+  background-image: url(goose-logo.png);
+} 
+
+#beer-logo.goose-island {
+  background-image: url(goose-logo.png);
+} 
+
+#beer-logo.brewdog {
+  background-image: url(brewdog-logo.png);
+} 
+

@@ -3,42 +3,31 @@
 <%= link_to 'New Product', new_product_path %>
 
 
-<div class="container-fluid">
-  <div class="row" id="nav-head">
-    <div class="col-md-3">
+<div class="container-fluid" id="nav-head">
+  <h1>BEER <span>GOBLIN</span></h1>
+  <h5>Choose your beer or search</h5>
+    <div id="search-bar">
+    <%= form_tag("/products", method: "get") do %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+    <% end %>
     </div>
-    <div class="col-md-6">
-      <h1>BEER <span>GOBLIN</span></h1>
-      <h5>Choose your beer or search</h5>
-        <%= form_tag("/products", method: "get") do %>
-        <%= text_field_tag(:q) %>
-        <%= submit_tag("Search") %>
-        <% end %>
-    </div>
-    <div class="col-md-3">
-    </div>
-  </div>
 </div>
 
 <div class="container-fluid" id="side-nav-wrapper">
-  <div class="row">
-    <div class="col-md-2 col-sm-6 col-xs-2">
-      <ul class="side-nav">
-      <li><%#= link_to 'test',  @products %></li>
-        <li><a href="#brooklyn">Brooklyn Brewery</a></li>
-        <li><a href="#wychwood">Wychwood</a></li>
-        <li><a href="#flying-dog">Flying Dog</a></li>
-        <li><a href="#oskar-blues">Oskar Blues</a></li>
-        <li><a href="#goose-island">Goose Island</a></li>
-        <li><a href="#brewdog">BrewDog</a></li>
-      </ul>
-    </div>
-    <div class="col-md-10 col-sm-10 col-xs-10">
-    </div>
-  </div>
+  <ul class="side-nav">
+    <li><a>Brooklyn Brewery</a></li>
+    <li><a>Wychwood</a></li>
+    <li><a>Flying Dog</a></li>
+    <li><a>Oskar Blues</a></li>
+    <li><a>Goose Island</a></li>
+    <li><a>BrewDog</a></li>
+  </ul>
 </div>
 
 <div class="container-fluid" id="beer-content">
+  <div id="beer-logo"> 
+  </div>
   <div class="row">
     <%= render @products %>
   </div>

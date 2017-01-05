@@ -32,6 +32,9 @@ gem 'devise'
 #cancancan for authorization users. Run: rails g cancan:ability to generate model file: ability.rb
 gem 'cancancan', '~> 1.10'
 
+# Stripe Payment
+gem 'stripe'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # group :development, :test do

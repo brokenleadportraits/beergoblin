@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
+
+// NAV JAVA
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -24,7 +26,38 @@ function myFunction() {
     }
 }
 
+
+// ALERT JAVA
 $(document).on('turbolinks:load',function(){
   console.log($(".alert")); // = test to see works in console
   $(".alert").delay(3000).fadeOut("slow");
+});
+
+
+
+// SIDE NAV JAVA
+$(document).on("click", function(){
+
+	$(".side-nav li a").click(function(){
+
+		var selectedBeer = $(this).text();
+
+		var beers = $("[data-prod-brewery]");
+
+		beers.each(function(){
+
+			if ($(this).attr("data-prod-brewery") === selectedBeer) {
+				$(this).show()
+			}
+			else{
+				$(this).hide();
+			}
+		});
+
+		$("#beer-logo").removeAttr("class");
+		$("#beer-logo").addClass("active");
+		$("#beer-logo").addClass(selectedBeer.toLowerCase().replace(" ", "-"));	
+
+	});
+
 });
