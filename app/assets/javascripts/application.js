@@ -61,3 +61,10 @@ $(document).on("click", function(){
 	});
 
 });
+
+
+// SIDE NAV FIXED SCROLLING FIX JAVA
+$(window).scroll(function(){
+    $(".side-nav").css("top", Math.max(200, 250 - $(this).scrollTop()));
+});
+
