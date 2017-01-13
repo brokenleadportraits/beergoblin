@@ -87,6 +87,8 @@
   position: fixed;
   width: 20%;
   margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 @media screen and (max-width: 820px) {
  .side-nav {
@@ -104,6 +106,12 @@
 .side-nav li {
   list-style-type: none;
 }
+
+.side-nav li:hover {
+  background-color: #009933;
+  transition: 0.9s;
+  border-radius: 15px 50px;
+  }
 
 .side-nav li a {
   background: transparent;

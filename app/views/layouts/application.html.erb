@@ -25,12 +25,18 @@
 			  <li><%= link_to "Beers", products_path %></li>
 			  <li><%= link_to "News", static_pages_news_path %></li>
 			 	<li><%= link_to "Contact", static_pages_contact_path %></li>
-			  <li><%= link_to "Order", orders_path %></li>
         <li>
           <% if user_signed_in? %>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
           <% else %>
             <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+        </li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to image_tag("rsz_cart.png"), orders_path, id: "cart-img" %>
+          <% else %>
+            <%= link_to('', new_user_session_path) %>
           <% end %>
         </li>
 			  <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
@@ -41,7 +47,8 @@
     <%= yield %>
 
     <footer>
-  &copy; 2016 Beer Goblin
-</footer>
+      &copy; 2016 Beer Goblin
+    </footer>
   </body>
 </html>
+<%#= link_to "Cart", orders_path %>

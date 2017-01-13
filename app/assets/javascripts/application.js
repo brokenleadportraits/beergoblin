@@ -38,7 +38,7 @@ $(document).on('turbolinks:load',function(){
 // SIDE NAV JAVA
 $(document).on("click", function(){
 
-	$(".side-nav li a").click(function(){
+	$(".side-nav li").click(function(){
 
 		var selectedBeer = $(this).text();
 
