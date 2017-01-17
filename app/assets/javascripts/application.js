@@ -36,7 +36,7 @@ $(document).on('turbolinks:load',function(){
 
 
 // SIDE NAV JAVA
-$(document).on("click", function(){
+$(document).on("touchstart click", function(){
 
 	$(".side-nav li").click(function(){
 
